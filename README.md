@@ -38,7 +38,7 @@ pip install -r requirements.txt
 Everything is containerized. So all you need is Docker installed, and then you can build and run:
 
 ```bash
-docker-compose up -d --build
+sudo docker-compose up -d --build
 ```
 
 And your app will be up on the *port 8000*
@@ -52,19 +52,19 @@ docker exec -it ysbackend python manage.py test
 ### Swagger API Doc
 
 API Documentation is also saved in the main directory as PDF.
-http://localhost:8000/api/v1/docs
+[http://localhost:8000/api/v1/docs](http://localhost:8000/api/v1/docs)
 
 ### RabbitMQ Dasboard
 
 If you want to follow the metrics
-http://localhost:15672/
+[http://localhost:15672/](http://localhost:15672/)
 
 *Username: admin*
 *Password: admin*
 
 ### Django Admin Dashboard
 
-http://localhost:8000/admin
+[http://localhost:8000/admin](http://localhost:8000/admin)
 
 *Username: admin*
 *Password: admin*

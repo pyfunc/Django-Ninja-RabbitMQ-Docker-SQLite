@@ -1,14 +1,18 @@
-FROM python:3.10
+FROM python:3.10-alpine
 
-WORKDIR /app
 
-COPY requirements.txt /app/
+RUN pip install --upgrade pip
 
-RUN python --version
-#RUN /usr/local/bin/python -m pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN adduser -D myuser
+USER myuser
+WORKDIR /home/myuser
 
-COPY . /app/
+COPY --chown=myuser:myuser requirements.txt requirements.txt
+RUN pip install --user -r requirements.txt
+
+ENV PATH="/home/myuser/.local/bin:${PATH}"
+
+COPY --chown=myuser:myuser . .
 
 EXPOSE 8000
 
