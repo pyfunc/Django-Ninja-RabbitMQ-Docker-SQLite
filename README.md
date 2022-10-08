@@ -37,8 +37,14 @@ pip install -r requirements.txt
 
 Everything is containerized. So all you need is Docker installed, and then you can build and run:
 
+START
 ```bash
 sudo docker-compose up -d --build
+```
+
+STOP
+```bash
+sudo docker-compose down
 ```
 
 And your app will be up on the *port 8000*
@@ -68,6 +74,10 @@ If you want to follow the metrics
 
 *Username: admin*
 *Password: admin*
+
+NEW USER
+test
+developer1
 
 ### Notes
 

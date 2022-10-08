@@ -117,5 +117,5 @@ pipenv -r lock >> requirements.txt
 sudo docker image build .
 sudo docker images
 docker run
-`sudo docker image prune -y`
+sudo docker image prune -y
 ``` 
