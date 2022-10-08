@@ -18,11 +18,26 @@ Hello, there are six endpoints and one background task;
 * SQLite
 * APScheduler
 
+## Install docker
+
+```bash
+cd /media/tom/projects/pyfunc/Django-Ninja-RabbitMQ-Docker-SQLite
+```
+
+```bash
+sudo apt install docker-compose
+```
+
+```bash
+cd ys
+pip install -r requirements.txt
+```
+
 ### Run the app in Docker
 
 Everything is containerized. So all you need is Docker installed, and then you can build and run:
 
-```
+```bash
 docker-compose up -d --build
 ```
 
@@ -30,7 +45,7 @@ And your app will be up on the *port 8000*
 
 ### Test
 
-```
+```bash
 docker exec -it ysbackend python manage.py test
 ```
 
@@ -40,6 +55,7 @@ API Documentation is also saved in the main directory as PDF.
 http://localhost:8000/api/v1/docs
 
 ### RabbitMQ Dasboard
+
 If you want to follow the metrics
 http://localhost:15672/
 
